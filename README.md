@@ -80,7 +80,8 @@
 ## Getting started Demo:
 
 Add your mongodb_url in api/.env and run:
-Docker: `docker-compose up`
+ - Docker: `docker-compose up`
+ 
 Without Docker:
-Client: `cd client -> npm install -> npm start`
-API: `cd api -> npm install -> npm run dev`
+ - Client: `cd client -> npm install -> npm start`
+ - API: `cd api -> npm install -> npm run dev`
