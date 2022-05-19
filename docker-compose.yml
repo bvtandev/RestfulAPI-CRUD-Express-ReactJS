@@ -1,18 +1,18 @@
 version: '3.8'
 
 services:
-  api:
-    container_name: api
+  server:
+    container_name: server
     restart: unless-stopped
     build:
-      context: ./api
+      context: ./server
       dockerfile: Dockerfile
     ports:
       - 5000:5000
     env_file:
-      - ./api/.env
+      - ./server/.env
     volumes:
-      - ./api/src:/app/src
+      - ./server/src:/app/src
     networks:
       - devat
 
@@ -27,7 +27,7 @@ services:
     volumes:
       - ./client/src:/app/src
     depends_on:
-      - api
+      - server
     networks:
       - devat
 
